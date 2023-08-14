@@ -1,26 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import happy from './happyelijah.png';
 
-function App() {
+//importing redux store and provider
+import { store } from './app/store'
+import { Provider } from 'react-redux'
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div>
+      <a href="about.html" target="_blank" rel="noreferrer">
+        <img src={happy} alt="example" />
         </a>
-      </header>
+     <br/>
+     <br/>
+     
+     
     </div>
   );
 }
-
-export default App;
