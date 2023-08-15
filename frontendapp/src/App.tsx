@@ -1,22 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import happy from './happyelijah.png';
 
-//importing redux store and provider
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './Home';
+import About from "./Aboutme";
+
+// importing redux store and provider
 import { store } from './app/store'
 import { Provider } from 'react-redux'
 
 export default function App() {
   return (
-    <div>
-      <a href="about.html" target="_blank" rel="noreferrer">
-        <img src={happy} alt="example" />
-        </a>
-     <br/>
-     <br/>
-     
-     
-    </div>
+    
+    
+    <Router>
+        <div className="App">
+            <Routes> 
+                <Route path="/about-me" element={<About />} />
+                <Route path="/" element={<Home />} />
+            </Routes>
+        </div>
+    </Router>
+    
   );
-}
+};
