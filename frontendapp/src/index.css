@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.hover-shadow:hover {
+  transform: scale(1.05);
+  transition: transform .2s;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.photo {
+  max-height: 65%;
+  
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(45deg, #f06, #9f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}

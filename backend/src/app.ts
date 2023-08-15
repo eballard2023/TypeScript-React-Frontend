@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import cors from 'cors';
 
 const app = express();
 const PORT = 5001;
@@ -9,6 +10,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // Set EJS as the templating engine
 app.set('view engine', 'ejs');
+
+app.use(cors());
 
 
 //importing json with information about me
@@ -26,7 +29,7 @@ app.listen(PORT, () => {
 });
 
 app.get('/awesome/applicant', (req, res) => {
-  console.log("im in here!");
+
     res.json(story);
 
 })
